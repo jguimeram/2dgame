@@ -1,9 +1,13 @@
+import { Render } from "./Render.js"
+
+
 export class Game{
     public canvas: HTMLCanvasElement
     public ctx: CanvasRenderingContext2D
     private  WIDTH: number = 1900
     private  HEIGHT: number = 900
     private start: number | null
+    private render: Render
 
     constructor(){
         this.canvas = document.getElementById('game') as HTMLCanvasElement
@@ -11,10 +15,11 @@ export class Game{
         this.canvas.width = this.WIDTH
         this.canvas.height = this.HEIGHT
         this.start = 0
+        this.render = new Render
     }
 
     init(){
-        
+   
     }
 
     loop(){
