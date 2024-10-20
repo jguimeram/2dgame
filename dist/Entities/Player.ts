@@ -1,6 +1,6 @@
 import { Entity } from "./Entity.js";
 import { Vector2 } from "../Vectors/Vector2.js";
-import { Keyboard } from "../Control/Device.js";
+
 
 export class Player extends Entity{
 
@@ -8,13 +8,7 @@ export class Player extends Entity{
         super(pos,color,radius)
     }
 
-    setDeviceControl(device: Keyboard): void {
-    this.device = new Keyboard        
-    }
-
-    getDevice(){
-        return this.device
-    }
+   
 }
 
 

@@ -1,6 +1,6 @@
 import { Entity } from "./Entity.js";
 import { Vector2 } from "../Vectors/Vector2.js";
-import { Mouse } from "../Control/Device.js";
+
 
 export class Boss extends Entity{
 
@@ -8,8 +8,5 @@ export class Boss extends Entity{
         super(pos,color,radius)
     }
 
-    setDeviceControl(device: Mouse): void {
-    this.device = new Mouse        
-    }
 }
 

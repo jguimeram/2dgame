@@ -26,4 +26,8 @@ export class Entity{
         this.device = device
     }
 
+    getDevice(){
+        return this.device
+    }
+
 }

@@ -18,4 +18,7 @@ export class Entity {
     setDeviceControl(device) {
         this.device = device;
     }
+    getDevice() {
+        return this.device;
+    }
 }

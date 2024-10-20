@@ -19,9 +19,10 @@ export class Game{
     }
 
     init(){
-   
+        this.render.setParameters()
+        this.render.setControllers()
     }
-
+    
     loop(){
         const fn = (timestamp:number) =>{
             if(this.start === null){
@@ -30,6 +31,8 @@ export class Game{
             let deltatime = (timestamp - this.start) / 1000;
             this.start = timestamp            
             window.requestAnimationFrame(fn)
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+            this.render.draw(this.ctx)
         }
         window.requestAnimationFrame(fn)
     }
